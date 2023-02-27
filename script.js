@@ -1,3 +1,5 @@
+( () => {
+
 const btn = document.querySelector('[data-form-btn]');
 
 const createTask = (evento) => {
@@ -9,7 +11,6 @@ const createTask = (evento) => {
 
     task.classList.add('card');
     input.value = '';
-    console.log(checkComplete);
 
     const taskContent = document.createElement('div');
     const titleTask = document.createElement('span');
@@ -26,11 +27,7 @@ const createTask = (evento) => {
    
     task.appendChild(taskContent);
     list.appendChild(task);
-
-    console.log(content);
 }    
-
-console.log(btn);
 
 //Arrow functions o funciones anonimas
 btn.addEventListener('click', createTask)
@@ -48,3 +45,5 @@ const completeTask = (event) => {
     element.classList.toggle('completeIcon');
     element.classList.toggle('far');
 }
+
+}) ()
